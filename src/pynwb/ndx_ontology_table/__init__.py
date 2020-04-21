@@ -1,5 +1,11 @@
 import os
-from pynwb import load_namespaces
+
+# Explicitly importing pynwb is required to ensure the global pynwb maps
+# are populated.
+# noinspection PyUnresolvedReferences
+import pynwb  # noqa: F401
+
+from hdmf.common import load_namespaces
 
 # Set path of the namespace.yaml file to the expected install location
 ndx_ontology_table_specpath = os.path.join(
@@ -20,3 +26,5 @@ if not os.path.exists(ndx_ontology_table_specpath):
 
 # Load the namespace
 load_namespaces(ndx_ontology_table_specpath)
+
+from .ontology_table import OntologyTable
