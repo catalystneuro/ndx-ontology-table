@@ -1,0 +1,14 @@
+namespaces:
+- author:
+  - Ben Dichter
+  contact:
+  - ben.dichter@catalystneuro.com
+  doc: Provides a table for linking free-form terms in an NWB file to an ontological
+    terms
+  name: ndx-ontology-table
+  schema:
+  - namespace: core
+    neurodata_types:
+    - ElectricalSeries
+  - source: ndx-ontology-table.extensions.yaml
+  version: 0.1.0
