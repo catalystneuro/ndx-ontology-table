@@ -1,8 +1,37 @@
 groups:
-- neurodata_type_def: TetrodeSeries
-  neurodata_type_inc: ElectricalSeries
-  doc: An extension of ElectricalSeries to include the tetrode ID for each time series.
-  attributes:
-  - name: trode_id
-    dtype: int32
-    doc: The tetrode ID.
+- name: OntologyTable
+  data_type_def: OntologyTable
+  data_type_inc: DynamicTable
+  doc: Maps terms in an NWB file to ontological terms
+  datasets:
+  - name: object_id
+    data_type_inc: VectorData
+    dtype: text
+    dims:
+    - nterms
+    shape:
+    - null
+    doc: uuid of neurodata_type
+  - name: field_name
+    data_type_inc: VectorData
+    dtype: text
+    dims:
+    - nterms
+    shape:
+    - null
+    doc: neurodata_type field
+  - name: field_value
+    data_type_inc: VectorData
+    dims:
+    - nterms
+    shape:
+    - null
+    doc: value of field
+  - name: uri
+    data_type_inc: VectorData
+    dtype: text
+    dims:
+    - nterms
+    shape:
+    - null
+    doc: uri to match with

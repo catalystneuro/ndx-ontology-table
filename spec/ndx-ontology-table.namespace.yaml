@@ -7,8 +7,8 @@ namespaces:
     terms
   name: ndx-ontology-table
   schema:
-  - namespace: core
-    neurodata_types:
-    - ElectricalSeries
+  - data_types:
+    - DynamicTable
+    namespace: hdmf-common
   - source: ndx-ontology-table.extensions.yaml
   version: 0.1.0
